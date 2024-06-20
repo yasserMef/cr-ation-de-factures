@@ -3,8 +3,6 @@ import CreateFacture from "./secondCompennet/CreateFacture.js";
 import FactureList from "./secondCompennet/FactureList.js";
 
 
-
-
 class App extends Component{
     constructor(){
         super();
@@ -19,21 +17,17 @@ class App extends Component{
     
     }
      ajouteArticle (){
-       this.setState({count:this.state.count+1})
-        if(this.state.articleList.length ===0){
-           this.setState({articleList :this.state.articleList.push({
-               id:this.state.count,
-               
-           })}) 
-        }
-         
+       this.setState({count:this.state.count})
         if(JSON.parse(localStorage.getItem("articlesItemes")) == null){
-            localStorage.setItem("articlesItemes" ,JSON.stringify(this.state.articleList))
+            localStorage.setItem("articlesItemes" ,JSON.stringify([{
+                id:this.state.count,
+            }]))
         }else if(JSON.parse(localStorage.getItem("articlesItemes")).length == 0){
-            console.log("hello")
-            localStorage.setItem("articlesItemes" ,JSON.stringify(this.state.articleList))
+            localStorage.setItem("articlesItemes" ,JSON.stringify([{
+                id:this.state.count,
+            }]))
         }else{
-            console.log("hello")
+            
             localStorage.setItem("articlesItemes" ,JSON.stringify([...JSON.parse(localStorage.getItem("articlesItemes")),{
                 id:JSON.parse(localStorage.getItem("articlesItemes"))[JSON.parse(localStorage.getItem("articlesItemes")).length-1].id+1,
                
@@ -53,8 +47,9 @@ componentDidMount(){
 }
 render(){   
         return (
-            <div className="container">
-                <CreateFacture articleItem ={this.state.getArticleList} ajouteArticle={this.ajouteArticle} deleteArticl ={this.suprimerArticl}  changeQuntite={this.changeQuntite} pourcentage={this.state.pourcentage}/>
+            <div className="container mt-2">
+                <h3 style={{textAlign:"center" , marginTop:"20px"}}>SimpleCRM: création de factures</h3>
+                <CreateFacture articleItem ={this.state.getArticleList} ajouteArticle={this.ajouteArticle} deleteArticl ={this.suprimerArticl}/>
                 <FactureList />
             </div>
             );

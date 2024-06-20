@@ -15,11 +15,11 @@ export default class DetailsFacture extends Component {
       <thead>
       
           <tr>
-          <th scope="col">id_facture</th>
-          <th scope="col">client</th>
-          <th scope="col">Montant HT</th>
-          <th scope="col">TVA</th>
-          <th scope="col">Montant TTC</th>
+          <th scope="col">Articl</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Prix</th>
+          <th scope="col">Remise</th>
+          <th scope="col">Montant</th>
          
           
         </tr>

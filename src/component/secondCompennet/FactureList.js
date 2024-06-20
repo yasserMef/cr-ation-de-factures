@@ -21,11 +21,10 @@ export default class FactureList extends Component {
   render() {
     
     return (
-      <div className='cont-AjouterDetailsFacture  mt-5 w-100' style={{paddingBlock:"20px"}}>
-      <table class="table table-hover  ">
+      <div className='cont-AjouterDetailsFacture d-flex justify-content-center  mt-5 w-100' style={{paddingBlock:"20px"}}>
+      <table class="table table-hover w-75  ">
       <thead>
-      
-          <tr>
+      <tr>
           <th scope="col">id_facture</th>
           <th scope="col">client</th>
           <th scope="col">Montant HT</th>
@@ -46,7 +45,7 @@ export default class FactureList extends Component {
       <td>{item.Montant_HT}</td>
       <td>{item.TVA}</td>
       <td>{item.Montant_TTC}</td>
-      <td data-bs-toggle="modal" data-bs-target="#exampleModal"  onClick={()=>this.detailFact(item.id)} >view</td>
+      <td style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal"  onClick={()=>this.detailFact(item.id)} >view</td>
          </tr>
         )
       }) : ""}

@@ -85,7 +85,7 @@ export default class ArticleItem extends Component {
 
   render() {
     return (
-      <form className="form-inline row w-75 mt-3" id={`form-articlItem-${this.props.id}`}>
+      <form className="form-inline row w-75 " id={`form-articlItem-${this.props.id}`}>
         <div className="form-group mx-sm-3 col">
           <label className="sr-only">Article</label>
           <select className="form-select" onChange={this.getPrix}>
@@ -101,15 +101,15 @@ export default class ArticleItem extends Component {
         </div>
         <div className="form-group mx-sm-3 mb-2 col">
           <label htmlFor={`Prix-${this.props.id}`} className="sr-only">Prix</label>
-          <input type="text" className="form-control"  value={this.state.prix}  />
+          <input type="text" className="form-control"  value={this.state.prix}  disabled/>
         </div>
         <div className="form-group mx-sm-3 mb-2 col">
           <label htmlFor={`Remise-${this.props.id}`} className="sr-only">Remise</label>
-          <input type="text" value={this.state.pourcentage} className="form-control" id={`Remise-${this.props.id}`} />
+          <input type="text" value={this.state.pourcentage} className="form-control" id={`Remise-${this.props.id}`} disabled/>
         </div>
         <div className="form-group mx-sm-3 mb-2 col">
           <label htmlFor={`Montant-${this.props.id}`} className="sr-only">Montant</label>
-          <input type="text" value={this.state.montant} className="form-control" id={`Montant-${this.props.id}`} />
+          <input type="text" value={this.state.montant} className="form-control" id={`Montant-${this.props.id}`} disabled/>
         </div>
         <div className="form-group mx-sm-3 mb-2 col">
           <label htmlFor={`Suprimé-${this.props.id}`} className="sr-only">Suprimé</label>

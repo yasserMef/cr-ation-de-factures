@@ -7,7 +7,7 @@ export default class CreateFacture extends Component {
     return (
       <div className='cont-AjouterDetailsFacture'>
         <AjouterDetailsFacture ajouteArticle ={this.props.ajouteArticle}/>
-        <ArticleList articleItem={this.props.articleItem} deleteArticl={this.props.deleteArticl}  changeQuntite={this.props.changeQuntite} pourcentage={this.props.pourcentage}/>
+        <ArticleList articleItem={this.props.articleItem} deleteArticl={this.props.deleteArticl}  />
       </div>
     )
   }

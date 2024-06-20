@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 .cont-AjouterDetailsFacture{
     background-color: #ecf6fb;
+    
 }
